@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Financiamento</title>
+    <script src="./finan.js" defer></script>
+    <link rel="stylesheet" href="financ.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="img">
+        <img id="img_empresa" src="../imgs/logomat.png" alt="Logo empresa">
+    </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../despesas/despesas.html">Home</a></li>
+                <li><a href="../financiamento/Financiamento.html">Simulador Financiamento</a></li>
+                <li><a href="../educação/educacao.html">Educação</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sidebar"></div>
+    <div class="container">
+        <h2>Simulador de Financiamento</h2>
+        <form id="financiamentoForm">
+            <label for="tipoFinanciamento">Tipo de Financiamento:</label>
+            <select id="tipoFinanciamento" name="tipoFinanciamento">
+                <option value="imobiliario">Imobiliário</option>
+                <option value="automotivo">Automotivo</option>
+                <!-- Adicione outras opções conforme necessário -->
+            </select>
+
+            <label for="valorTotal">Valor Total (R$):</label>
+            <input type="number" id="valorTotal" name="valorTotal" required>
+
+            <label for="prazo">Prazo (Meses):</label>
+            <input type="number" id="prazo" name="prazo" required>
+
+            <label for="taxaJuros">Taxa de Juros (% a.a.):</label>
+            <input type="number" id="taxaJuros" name="taxaJuros" required>
+
+            <button type="button" onclick="calcular()">Calcular</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            <h2>Resultados da Simulação</h2>
+            <p id="valorParcela">Valor da Parcela: R$ 0,00</p>
+            <p id="custoTotalCredito">Custo Total do Crédito: R$ 0,00</p>
+            <p id="totalJurosPagos">Total de Juros Pagos: R$ 0,00</p>
+            <canvas id="grafico" width="400" height="200"></canvas>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: rgb(25,25,32);
+    background: linear-gradient(0deg, rgba(25,25,32,1) 16%, rgba(3,17,101,1) 100%);
+    color: white;
+    padding: 80px;
+    text-align: center;
+}
+#img_empresa {
+    
+    width:120px;
+    padding-right: 30px;
+    height: 120px;
+    padding-top: 5px;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    margin-left: 500px;
+    border-radius: 10px;
+    width: 400px;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+h2{
+    text-align: center;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0055a5;
+}
+
+.resultado {
+    margin-top: 20px;
+}
+
+#grafico {
+    margin-top: 20px;
+}
