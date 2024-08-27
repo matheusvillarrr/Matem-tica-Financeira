@@ -57,3 +57,4 @@ document.addEventListener('click', function(event) {
 
 // Initialize the summary
 updateSummary();
+
