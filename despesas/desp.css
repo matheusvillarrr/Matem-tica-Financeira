@@ -22,6 +22,25 @@ header {
     padding-top: 5px;
     
 }
+#img_finance {
+    width:20px;
+
+    height: 20px;
+}
+
+.div1{
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
+    
+}
+.div1 img { 
+ margin-left: 170px;
+}
+
+
 
 
 nav ul {
@@ -56,11 +75,20 @@ main {
 .card {
     background: #f4f4f4;
     border: 1px solid #ddd;
-    padding: 40px;
+    padding: 29px;
     text-align: center;
-    width: 170px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 190px;
+    box-shadow: 20 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35px;
+    justify-content: center;
+    
+
+   
+    
 }
 
 button {
