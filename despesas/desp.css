@@ -147,3 +147,15 @@ footer {
     text-decoration: none;
     font-size: 20px;
 }
+.card.total-negative {
+    background-color: #f8d7da; 
+    border-color: #f5c6cb;
+}
+
+.card.total-positive {
+    background-color: #d4edda; 
+    border-color: #c3e6cb;
+}
+
+
+
