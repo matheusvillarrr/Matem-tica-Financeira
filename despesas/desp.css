@@ -90,8 +90,13 @@ main {
    
     
 }
+.finance-summary button{
+     border: none;
+     background: #f4f4f4;
+     color: 1px solid #ddd;
+}
 
-button {
+.transactions button {
     margin-top: 10px;
     padding: 5px 10px;
     border: none;
@@ -101,7 +106,7 @@ button {
     border-radius: 0px; 
 }
 
-button:hover {
+.transactions button:hover {
     background-color: #0056b3; 
 }
 
@@ -153,3 +158,15 @@ footer {
     height: 40px;
     border-radius: 50px;
 }
+.card.total-negative {
+    background-color: #f8d7da; 
+    border-color: #f5c6cb;
+}
+
+.card.total-positive {
+    background-color: #d4edda; 
+    border-color: #c3e6cb;
+}
+
+
+
