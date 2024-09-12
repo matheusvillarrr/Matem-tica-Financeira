@@ -1,7 +1,7 @@
-// Variable to keep track of the row being edited
+
 let editingRow = null;
 
-// Function to update the summary based on transactions
+
 function updateSummary() {
     const rows = document.querySelectorAll('#transactionsTable tbody tr');
     let totalEntradas = 0;
@@ -12,14 +12,14 @@ function updateSummary() {
         const valor = parseFloat(valorText);
         if (!isNaN(valor)) {
             if (row.children[1].innerText.startsWith('-R$ ')) {
-                totalSaidas += valor; // add negative values as positive to totalSaidas
+                totalSaidas += valor; 
             } else {
                 totalEntradas += valor;
             }
         }
     });
 
-    const totalGeral = totalEntradas - totalSaidas; // correct calculation for total geral
+    const totalGeral = totalEntradas - totalSaidas; 
 
     document.getElementById('totalEntradas').innerText = `R$ ${totalEntradas.toFixed(2).replace('.', ',')}`;
     document.getElementById('totalSaidas').innerText = `-R$ ${totalSaidas.toFixed(2).replace('.', ',')}`;
@@ -35,7 +35,6 @@ function updateSummary() {
     }
 }
 
-// Function to handle form submission
 document.getElementById('transactionForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -58,7 +57,7 @@ document.getElementById('transactionForm').addEventListener('submit', function(e
             document.querySelector('#transactionsTable tbody').appendChild(row);
         }
 
-        // Reset form fields and editing state
+       
         document.getElementById('transactionForm').reset();
         editingRow = null;
 
@@ -68,7 +67,7 @@ document.getElementById('transactionForm').addEventListener('submit', function(e
     }
 });
 
-// Handle click events for edit and delete buttons
+
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('edit')) {
         const row = event.target.closest('tr');
@@ -77,12 +76,12 @@ document.addEventListener('click', function(event) {
         const valor = parseFloat(valorText);
         const tipo = row.children[1].innerText.startsWith('-R$ ') ? 'saida' : 'entrada';
 
-        // Fill form with row data
+     
         document.getElementById('descricao').value = descricao;
         document.getElementById('valor').value = valor.toFixed(2).replace('.', ',');
         document.getElementById('tipo').value = tipo;
 
-        // Set the row to be edited
+      
         editingRow = row;
     } else if (event.target.classList.contains('delete')) {
         const row = event.target.closest('tr');
@@ -91,5 +90,149 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Initialize the summary
 updateSummary();
+
+var modal = document.getElementById("transactionsModal");
+
+
+var btn = document.getElementById("financeSummary");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+var modal = document.getElementById("transactionsModal");
+var btn = document.getElementById("financeSummary");
+var span = document.getElementsByClassName("close")[0];
+var statusMessage = document.getElementById("statusMessage");
+
+
+function showStatus(messageType) {
+    let message;
+    let type;
+
+    switch (messageType) {
+        case 'transactionAdded':
+            message = 'Transação feita com sucesso!';
+            type = 'success';
+            break;
+        case 'transactionRemoved':
+            message = 'Transação removida com sucesso!';
+            type = 'success';
+            break;
+        default:
+            message = 'Operação desconhecida.';
+            type = 'error';
+    }
+
+    statusMessage.innerText = message;
+    statusMessage.className = 'status-message ' + type; 
+    statusMessage.style.display = 'block';
+    setTimeout(() => {
+        statusMessage.style.display = 'none';
+    }, 3000); 
+}
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+var modal = document.getElementById("transactionsModal");
+var btn = document.getElementById("financeSummary");
+var span = document.getElementsByClassName("close")[0];
+var statusMessage = document.getElementById("statusMessage");
+var statusText = document.getElementById("statusText");
+
+
+function showStatus(messageType) {
+    let message;
+    let type;
+
+    switch (messageType) {
+        case 'transactionAdded':
+            message = 'Transação feita com sucesso!';
+            type = 'success';
+            break;
+        case 'transactionRemoved':
+            message = 'Transação removida com sucesso!';
+            type = 'success';
+            break;
+        default:
+            message = 'Operação desconhecida.';
+            type = 'error';
+    }
+
+    statusText.innerText = message;
+    statusMessage.className = 'status-message ' + type; 
+    statusMessage.style.display = 'block';
+    setTimeout(() => {
+        statusMessage.style.display = 'none';
+    }, 3000); 
+}
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+var transactionForm = document.getElementById("transactionForm");
+
+transactionForm.onsubmit = function(event) {
+
+    event.preventDefault();
+
+    var descricao = document.getElementById("descricao").value;
+    var valor = document.getElementById("valor").value;
+    var tipo = document.getElementById("tipo").value;
+
+    var newRow = document.createElement("tr");
+    newRow.innerHTML = `
+        <td>${descricao}</td>
+        <td>${valor}</td>
+        <td>${new Date().toLocaleDateString()}</td>
+        <td><button class="deleteBtn">Remover</button></td>
+    `
+}
