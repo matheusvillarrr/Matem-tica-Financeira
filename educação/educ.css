@@ -93,29 +93,19 @@ th {
 }
 
 footer {
-    
-        background: rgb(25,25,32);
-        background: linear-gradient(0deg, rgba(25,25,32,1) 16%, rgba(3,17,101,1) 100%);
-        color: white;
-        text-align: center;
-        padding: 1em;
-
-}
-
-.social-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.social-links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.social-links a {
+    background: rgb(25,25,32);
+    background: linear-gradient(0deg, rgba(25,25,32,1) 16%, rgba(3,17,101,1) 100%);
     color: white;
-    text-decoration: none;
-    font-size: 20px;
+    text-align: center;
+    padding: 1em;
+}
+
+footer {
+    background: rgb(25,25,32);
+    background: linear-gradient(0deg, rgba(25,25,32,1) 16%, rgba(3,17,101,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 50px;
 }
 
 .imgs{
