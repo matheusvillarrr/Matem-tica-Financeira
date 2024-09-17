@@ -107,27 +107,7 @@ footer {
     background: linear-gradient(0deg, rgba(25,25,32,1) 16%, rgba(3,17,101,1) 100%);
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 50px;
 }
 
-.social-links {
-    list-style-type: none;
-    padding: 0;
-}
 
-.social-links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.imgs{
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-}

@@ -29,43 +29,44 @@
     <div class="sidebar"></div>
     <div class="container">
         <h2>Simulador de Financiamento</h2>
-        <form id="financiamentoForm">
-            <label for="tipoFinanciamento">Tipo de Financiamento:</label>
-            <select id="tipoFinanciamento" name="tipoFinanciamento">
-                <option value="imobiliario">Imobiliário</option>
-                <option value="automotivo">Automotivo</option>
-                
-            </select>
+        <div class="form-box">
+              <form id="simuladorForm">
+                <label for="tipoFinanciamento">Tipo de Financiamento:</label>
+                <select id="tipoFinanciamento" name="tipoFinanciamento">
+                    
+                 <option value="imobiliario">Imobiliário</option>
+                    <option value="automotivo">Automotivo</option>
 
-            <label for="valorTotal">Valor Total (R$):</label>
-            <input type="number" id="valorTotal" name="valorTotal" required>
-
-            <label for="prazo">Prazo (Meses):</label>
-            <input type="number" id="prazo" name="prazo" required>
-
-            <label for="taxaJuros">Taxa de Juros (% a.a.):</label>
-            <input type="number" id="taxaJuros" name="taxaJuros" required>
-
-            <button type="button" onclick="calcular()">Calcular</button>
-        </form>
-
-        <div id="resultado" class="resultado">
-            <h2>Resultados da Simulação</h2>
-            <p id="valorParcela">Valor da Parcela: R$ 0,00</p>
-            <p id="custoTotalCredito">Custo Total do Crédito: R$ 0,00</p>
-            <p id="totalJurosPagos">Total de Juros Pagos: R$ 0,00</p>
-            <canvas id="grafico" width="400" height="200"></canvas>
-        </div>
-    </div>
+                  <label for="valorInicial">Valor Inicial:</label>
+                  <input type="number" id="valorInicial" placeholder="Ex: 1000" required>
+                  
+                  <label for="taxaJuros">Taxa de Juros (% ao ano):</label>
+                  <input type="number" id="taxaJuros" placeholder="Ex: 5" required>
+          
+                  <label for="dataInicio">Data de Início:</label>
+                  <input type="date" id="dataInicio" required>
+          
+                  <label for="anos">Número de Anos:</label>
+                  <input type="number" id="anos" placeholder="Ex: 10" required>
+          
+                  <button type="submit">Calcular</button>
+              </form>
+              <div id="resultado" class="resultado">
+                <h2>Resultados da Simulação</h2>
+                <p id="valorParcela">Valor da Parcela: R$ 0,00</p>
+                <p id="custoTotalCredito">Custo Total do Crédito: R$ 0,00</p>
+                <p id="totalJurosPagos">Total de Juros Pagos: R$ 0,00</p>
+                <canvas id="grafico" width="400" height="200"></canvas>
+            </div>
+              
+              <canvas id="grafico" width="400" height="200"></canvas>
+            </div>
+            <script src="financ.js"></script>
+        <canvas id="grafico" width="400" height="200"></canvas>
+      </div>
     <footer>
-        <ul class="social-links">
-            <li><a href="#"><img class="imgs" src="../imgs/facebook-removebg-preview.png"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><img class="imgs" src="../imgs/png-transparent-twitter-icon-computer-icons-logo-twitter-miscellaneous-leaf-branch-thumbnail-removebg-preview.png"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><img class="imgs" src="../imgs/instagram.jpg"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><img class="imgs" src="../imgs/linkedin-removebg-preview.png"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="#"><img class="imgs" src="../imgs/youtube-removebg-preview.png"><i class="fab fa-youtube"></i></a></li>
-        </ul>
+       
     </footer>
-    <script src="scripts.js"></script>
+  
 </body>
 </html>
