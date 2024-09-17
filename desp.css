@@ -59,7 +59,7 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
+    padding: 50px;
 }
 
 
@@ -128,32 +128,6 @@ th, td {
 th {
     background-color: #f4f4f4;
 }
-
-footer {
-    background: rgb(25,25,32);
-    background: linear-gradient(0deg, rgba(25,25,32,1) 16%, rgba(3,17,101,1) 100%);
-    color: white;
-    text-align: center;
-    padding: 3em;
-}
-
-.social-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.social-links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    
-}
-
 .imgs{
     width: 40px;
     height: 40px;
@@ -167,10 +141,7 @@ footer {
 .card.total-positive {
     background-color: #d4edda; 
     border-color: #c3e6cb;
-}
-
-
-             
+}           
 .modal {
     display: none; 
     position: fixed; 
@@ -246,10 +217,6 @@ footer {
 .finance-summary {
     margin-bottom: 20px; 
 }
-
-
-
-
 .modal {
     display: none;
     position: fixed;
@@ -284,8 +251,6 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
-
 .modal2{
     display: none;
     position: fixed;
@@ -320,4 +285,9 @@ footer {
     text-decoration: none;
     cursor: pointer;
   }
-  
+  footer {
+    background: rgb(25,25,32);
+    background: linear-gradient(0deg, rgba(25,25,32,1) 16%, rgba(3,17,101,1) 100%);
+    color: white;
+    padding: 50px;
+}
