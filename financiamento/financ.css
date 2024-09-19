@@ -110,3 +110,54 @@ footer {
     text-align: center;
     padding: 50px;
 }
+
+@media (max-width: 480px) {
+    .simulador {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .simulador h2 {
+        font-size: 1.5rem;
+    }
+
+    .simulador input,
+    .simulador select,
+    .simulador button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .simulador {
+        padding: 25px;
+        max-width: 80%;
+    }
+
+    .simulador h2 {
+        font-size: 1.8rem;
+    }
+
+    .simulador input,
+    .simulador select,
+    .simulador button {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .simulador {
+        padding: 30px;
+        max-width: 70%;
+    }
+
+    .simulador h2 {
+        font-size: 2rem;
+    }
+
+    .simulador input,
+    .simulador select,
+    .simulador button {
+        font-size: 1.1rem;
+    }
+}
