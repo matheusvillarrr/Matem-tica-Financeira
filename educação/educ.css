@@ -157,10 +157,10 @@ ul li {
     padding: 20px;
     border-radius: 8px;
     display: flex;
-    flex-wrap: nowrap; /* Impede que os vídeos quebrem de linha */
+    flex-wrap: nowrap; 
     justify-content: center; 
     gap: 20px;
-    overflow-x: auto; /* Permite rolagem horizontal se não houver espaço suficiente */
+    overflow-x: auto; 
 }
 
 .video {
@@ -183,17 +183,70 @@ ul li {
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    .videos {
-        flex-wrap: wrap; /* Em dispositivos menores, permite que os vídeos quebrem de linha */
-    }
-    
-    .video {
-        flex: 1 1 100%; 
-        max-width: 100%;
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
     }
 
-    .video iframe {
-        height: 180px;
+    header img {
+        max-width: 120px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
     }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header img {
+        max-width: 130px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    header img {
+        max-width: 140px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
