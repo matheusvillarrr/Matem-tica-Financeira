@@ -291,6 +291,7 @@ th {
     color: white;
     padding: 50px;
 }
+<<<<<<< HEAD
 <style>
         /* Estilo do botão transparente */
         #entrarBtn {
@@ -305,3 +306,61 @@ th {
             opacity: 0.7; /* Efeito de opacidade ao passar o mouse */
         }
     </style>
+=======
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    table, th, td {
+        font-size: 16px;
+    }
+}
+>>>>>>> fd3183906b95bd1928e03c2c1efa0cb509e0cb04

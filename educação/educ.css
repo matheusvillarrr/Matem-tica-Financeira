@@ -161,4 +161,75 @@ ul li {
 .videos h3 {
     text-align: center;
  
+<<<<<<< HEAD
 }
+       
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    header img {
+        max-width: 120px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header img {
+        max-width: 130px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    header img {
+        max-width: 140px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+=======
+}
+>>>>>>> 5551b2ca28dd8186d5f2693ce9739d9fa82f69f2
